@@ -23,6 +23,7 @@ def set_page_config():
     )
     set_header('YOUTUBE DATA WAREHOUSE')
 
+#SET HEADER
 def set_header(header):
     st.markdown(
     f"<h1 style='text-align: center; color: violet;'>{header}</h1>",
@@ -31,9 +32,11 @@ def set_header(header):
 
 # CREATING OPTION MENU    
 def create_option_menu():
+
     selected = option_menu(
-        menu_title="",
-        options=["Home", "Insert", "Analysis", "About"],
+        menu_title="", 
+        #options =["Home", "Insert", "Analysis", "About"],
+        options =["Home",  "Analysis", "About"],
         icons=["house-door-fill", "tools", "card-text", "file-person"],
         menu_icon="cast",  # optional
         default_index=0,  # optional
@@ -209,7 +212,8 @@ def get_answer(question,cursor,mydb):
     answer_df = pd.DataFrame(data.fetchall(),columns=data.column_names)
     st.dataframe(answer_df, use_container_width= True, hide_index= True)
     make_chart(question,data,answer_df)
-        
+
+#GET THE CORRESPONDING SQL QUERY
 def get_query(question):
     question_dict = {
         '1' : 'SELECT v.video_name as Video, c.channel_name as Channel FROM video v JOIN channel c ON v.channel_id = c.channel_id;',

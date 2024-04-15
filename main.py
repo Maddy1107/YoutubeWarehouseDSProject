@@ -1,5 +1,4 @@
 # IMPORTING NECESSARY LIBRARIES
-import plotly.express as px
 import mysql.connector as sql
 
 # IMPORT LOCAL MODULES
@@ -16,13 +15,13 @@ st.set_page_config()
 selected = st.create_option_menu()
 
 if selected == "Home":
-    st.home(cursor,mydb)
- 
-if selected == "Insert":
-    st.insert(cursor,mydb)
+    st.home(cursor, mydb)
+
+# if selected == "Insert":
+#     st.insert(cursor, mydb)
 
 if selected == "Analysis":
-    st.analysis(cursor,mydb)
+    st.analysis(cursor, mydb)
 
 if selected == "About":
     st.about()
