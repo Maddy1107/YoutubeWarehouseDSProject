@@ -17,8 +17,8 @@ selected = st.create_option_menu()
 if selected == "Home":
     st.home(cursor, mydb)
 
-# if selected == "Insert":
-#     st.insert(cursor, mydb)
+if selected == "Insert":
+    st.insert(cursor, mydb)
 
 if selected == "Analysis":
     st.analysis(cursor, mydb)
