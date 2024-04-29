@@ -130,9 +130,6 @@ def insert(cursor, mydb):
         for v in videos:
             vid = ch.get_video_details(v)
 
-            changed_date = f.change_date_format(vid[0]["Published_date"])
-            changed_time = f.change_duration_format(vid[0]["Duration"])
-
             sql.insert_into_videos(
                 (
                     v,

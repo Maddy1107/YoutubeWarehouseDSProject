@@ -3,7 +3,7 @@ import mysql.connector as sql
 
 def connect_database():
     conn = sql.connect(
-        host="localhost", user="root", password="India@123", db="youtube"
+        host="localhost", user="root", password="root", db="youtube"
     )
     cur = conn.cursor()
     return cur, conn
