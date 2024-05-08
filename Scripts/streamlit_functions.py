@@ -189,7 +189,7 @@ def analysis(cursor, mydb):
 
 # ABOUT OPTION
 def about():
-    set_header("**MADE BY MOUMITA ROY**")
+    set_header("**MADE BY NILANKAR DEB**")
     st.markdown(
         "## :blue[Technologies used] : Python, Youtube Data API, SQL, Streamlit"
     )
