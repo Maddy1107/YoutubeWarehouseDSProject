@@ -2,7 +2,6 @@
 import streamlit as st
 from PIL import Image
 from streamlit_option_menu import option_menu
-import mysql.connector as sql
 import pandas as pd
 import plotly.express as px
 

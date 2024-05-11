@@ -5,23 +5,28 @@ import mysql.connector as sql
 import Scripts.sql_script as sql
 import Scripts.streamlit_functions as st
 
-# CONNECT DATABASE
-cursor, mydb = sql.connect_database()
+def main():
+    # CONNECT DATABASE
+    cursor, mydb = sql.connect_database()
 
-# SETTING PAGE CONFIGURATIONS
-st.set_page_config()
+    # SETTING PAGE CONFIGURATIONS
+    st.set_page_config()
 
-# CREATING OPTION MENU
-selected = st.create_option_menu()
+    # CREATING OPTION MENU
+    selected = st.create_option_menu()
 
-if selected == "Home":
-    st.home(cursor, mydb)
+    if selected == "Home":
+        st.home(cursor, mydb)
 
-if selected == "Insert":
-    st.insert(cursor, mydb)
+    if selected == "Insert":
+        st.insert(cursor, mydb)
 
-if selected == "Analysis":
-    st.analysis(cursor, mydb)
+    if selected == "Analysis":
+        st.analysis(cursor, mydb)
 
-if selected == "About":
-    st.about()
+    if selected == "About":
+        st.about()
+
+
+if __name__ == '__main__':
+    main()
